@@ -5,27 +5,27 @@
                                   | Achievement_Name         |
                                   | Description              |
                                   | Rewards                  |
-                                  | Difficulty_Level         |           /\
-                                  +----------+---------------+          /  \
-                                             | M                       /    \
-                                             |                        /______\
-                                             |                       /        \
-                                             |                      /          \
-                                             |                     /            \
-                                             |                    /              \
-                                             | ________________  / ID_Achievement \
-                                             |                   \   ID_Player    /
-                                             |                    \    Date      /
-                                             |                     \            /
-                                             |                      \          /
-                                             |                       \ ______ /                                           
-                                             |                        \      /
-                                             |                         \    /
-                                             | N                        \  /
+                                  | Difficulty_Level         |          
+                                  +----------+---------------+         
+                                             | M                       
+                                             |                        / ‾‾‾‾‾‾ \
+                                             |                       /          \
+                                             |                      /            \
+                                             |                     /Achiev_Player \
+                                             |                    / ‾‾‾‾‾‾‾‾‾‾‾‾‾‾ \
+                                             | ________________  /  ID_Achievement  \
+                                             |                   \    ID_Player     /
+                                             |                    \     Date       /
+                                             |                     \              /
+                                             |                      \            /
+                                             |                       \ ________ /                                           
+                                             |                       
+                                             |                    
+                                             | N                   
 +--------------------------+     +-----------v--------------+     +--------------------------+  
 |      Virtual Items       |     |         Players          |     | Financial Transactions   |
 |--------------------------|     |--------------------------|     |--------------------------|
-| ID_Item (PK)             | N 1 | ID_Player                | 1 N | ID_Transaction (PK)      |
+| ID_Item (PK)             | N 1 | ID_Player (PK)           | 1 N | ID_Transaction (PK)      |
 | ID_Player (FK)           | ___ | Name                     | ___ | ID_Player (FK)           |
 | Item_Name                |     | Email                    |     | Transaction_Type         |
 | Description              |     | Password                 |     | Date_Time                |
