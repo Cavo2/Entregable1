@@ -1,0 +1,51 @@
+                                  +--------------------------+
+                                  |       Achievements       |
+                                  |--------------------------|
+                                  | ID_Achievement (PK)      |
+                                  | Achievement_Name         |
+                                  | Description              |
+                                  | Rewards                  |
+                                  | Difficulty_Level         |           /\
+                                  +----------+---------------+          /  \
+                                             | M                       /    \
+                                             |                        /______\
+                                             |                       /        \
+                                             |                      /          \
+                                             |                     /            \
+                                             |                    /              \
+                                             | ________________  / ID_Achievement \
+                                             |                   \   ID_Player    /
+                                             |                    \    Date      /
+                                             |                     \            /
+                                             |                      \          /
+                                             |                       \ ______ /                                           
+                                             |                        \      /
+                                             |                         \    /
+                                             | N                        \  /
++--------------------------+     +-----------v--------------+     +--------------------------+  
+|      Virtual Items       |     |         Players          |     | Financial Transactions   |
+|--------------------------|     |--------------------------|     |--------------------------|
+| ID_Item (PK)             | N 1 | ID_Player                | 1 N | ID_Transaction (PK)      |
+| ID_Player (FK)           | ___ | Name                     | ___ | ID_Player (FK)           |
+| Item_Name                |     | Email                    |     | Transaction_Type         |
+| Description              |     | Password                 |     | Date_Time                |
+| Price                    |     | Registration_Date        |     | Amount                   |
+| Category                 |     +--------------------------+     | Currency                 |
++--------------------------+                  | 1                 | Payment_Method           |
+                                              |                   | Transaction_Status       |
+                                              |                   +--------------------------+
+                                              |
+                                              | N
+                                  +---------------------------+             
+                                 | Support and Customer Service|
+                                 |-----------------------------|
+                                 | ID_Ticket (PK)              |
+                                 | ID_Player (FK)              |
+                                 | Creation_Date               |
+                                 | Problem_Category            |
+                                 | Problem_Description         |
+                                 | Priority                    |
+                                 | Ticket_Status               |
+                                 | Support_Agent_ID            |
+                                 | Last_Updated_Date           |
+                                 +-----------------------------+
