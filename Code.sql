@@ -4,7 +4,7 @@ use first_task;
 
 -- Crear la tabla Players
 CREATE TABLE Players (
-    ID_player INT PRIMARY KEY,
+    ID_player INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Players (
 
 -- Crear la tabla Virtual_Items
 CREATE TABLE Virtual_Items (
-    ID_item INT PRIMARY KEY,
+    ID_item INT PRIMARY KEY AUTO_INCREMENT,
     ID_player INT,
     item_name VARCHAR(100) NOT NULL,
     description TEXT,
@@ -23,7 +23,7 @@ CREATE TABLE Virtual_Items (
 
 -- Crear la tabla Achievements
 CREATE TABLE Achievements (
-    ID_achievement INT PRIMARY KEY,
+    ID_achievement INT PRIMARY KEY AUTO_INCREMENT,
     achievement_name VARCHAR(100) NOT NULL,
     description TEXT,
     rewards TEXT,
@@ -32,7 +32,7 @@ CREATE TABLE Achievements (
 
 -- Crear la tabla Financial_Transactions
 CREATE TABLE Financial_Transactions (
-    ID_transaction INT PRIMARY KEY,
+    ID_transaction INT PRIMARY KEY AUTO_INCREMENT,
     ID_player INT,
     transaction_type ENUM('Deposit', 'Purchase') NOT NULL,
     date_time DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -52,7 +52,7 @@ CREATE TABLE Achiev_Player (
 
 -- Crear la tabla Support_and_Customer_Service
 CREATE TABLE Support_and_Customer_Service (
-    ID_ticket INT PRIMARY KEY,
+    ID_ticket INT PRIMARY KEY AUTO_INCREMENT,
     ID_player INT,
     creation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     problem_category VARCHAR(50),
